@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs");%>
+
+<h1><%- label%></h1>
+
+<%list.forEach(element => {%>
+    <li><%-element%></li>
+<%});%>
+
+
+<form method="post" action=<%route%>>
+    <input type="text" name="newitem">
+    <input type="submit" value="+">
+</form>
+<%- include("partials/footer.ejs");%>
